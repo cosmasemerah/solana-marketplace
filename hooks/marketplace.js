@@ -22,34 +22,38 @@ export function useMarketplace() {
 
   // Initialize Marketplace
   const initializeMarketplace = async (name, fee) => {
-    const [marketplacePDA, marketplaceBump] = findProgramAddressSync(
-      [Buffer.from("marketplace"), Buffer.from(name)],
-      programID
-    );
+    try {
+      const [marketplacePDA, marketplaceBump] = findProgramAddressSync(
+        [Buffer.from("marketplace"), Buffer.from(name)],
+        programID
+      );
 
-    const [rewardsMintPDA] = findProgramAddressSync(
-      [Buffer.from("rewards"), marketplacePDA.toBuffer()],
-      programID
-    );
+      const [rewardsMintPDA] = findProgramAddressSync(
+        [Buffer.from("rewards"), marketplacePDA.toBuffer()],
+        programID
+      );
 
-    const [treasuryPDA] = findProgramAddressSync(
-      [Buffer.from("treasury"), marketplacePDA.toBuffer()],
-      programID
-    );
+      const [treasuryPDA] = findProgramAddressSync(
+        [Buffer.from("treasury"), marketplacePDA.toBuffer()],
+        programID
+      );
 
-    const tx = await program.methods
-      .initialize(name, new BN(fee), {
-        accounts: {
+      const tx = await program.methods
+        .initialize(name, new BN(fee))
+        .accounts({
           admin: provider.wallet.publicKey,
           marketplace: marketplacePDA,
           rewardsMint: rewardsMintPDA,
           treasury: treasuryPDA,
           systemProgram: web3.SystemProgram.programId,
           tokenProgram: TOKEN_PROGRAM_ID,
-        },
-      })
-      .rpc();
-    console.log("Marketplace initialized, transaction:", tx);
+        })
+        .rpc();
+
+      console.log("Marketplace initialized, transaction:", tx);
+    } catch (error) {
+      console.log("Error initializing marketplace:", error);
+    }
   };
 
   // List NFT

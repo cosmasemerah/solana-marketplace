@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Magic Mushroom 0325",
+    "artist": "Shroomie",
+    "price": 1.63,
+    "highestBid": 0.33
+  },
+  {
+    "id": 2,
+    "name": "Happy Robot 032",
+    "artist": "BeKind2Robots",
+    "price": 1.1,
+    "highestBid": 0.5
+  },
+  {
+    "id": 3,
+    "name": "Happy Robot 024",
+    "artist": "BeKind2Robots",
+    "price": 0.99,
+    "highestBid": 0.4
+  },
+  {
+    "id": 4,
+    "name": "Designer Bear",
+    "artist": "Mr Fox",
+    "price": 1.59,
+    "highestBid": 0.4
+  },
+  {
+    "id": 5,
+    "name": "Colorful Dog 0356",
+    "artist": "Keepitreal",
+    "price": 1.59,
+    "highestBid": 0.4
+  },
+  {
+    "id": 6,
+    "name": "Dancing Robots 0312",
+    "artist": "Robotica",
+    "price": 1.59,
+    "highestBid": 0.4
+  },
+  {
+    "id": 7,
+    "name": "Cherry Blossom Girl 035",
+    "artist": "MoonDancer",
+    "price": 1.59,
+    "highestBid": 0.4
+  },
+  {
+    "id": 8,
+    "name": "Space Travel",
+    "artist": "NebulaKid",
+    "price": 1.59,
+    "highestBid": 0.4
+  },
+  {
+    "id": 9,
+    "name": "Sunset Dimension",
+    "artist": "Animakid",
+    "price": 1.59,
+    "highestBid": 0.4
+  },
+  {
+    "id": 10,
+    "name": "Desert Walk",
+    "artist": "Catch 22",
+    "price": 1.59,
+    "highestBid": 0.4
+  },
+  {
+    "id": 11,
+    "name": "IceCream Ape 0324",
+    "artist": "Ice Ape Club",
+    "price": 1.59,
+    "highestBid": 0.4
+  },
+  {
+    "id": 12,
+    "name": "Colorful Dog 0344",
+    "artist": "PuppyPower",
+    "price": 1.59,
+    "highestBid": 0.4
+  }
+]

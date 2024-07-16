@@ -10,6 +10,9 @@ function MarketplaceActions({
   const [fee, setFee] = useState("");
   const [mintAddress, setMintAddress] = useState("");
   const [price, setPrice] = useState("");
+  const [listMarketplaceName, setListMarketplaceName] = useState("");
+  const [delistMarketplaceName, setDelistMarketplaceName] = useState("");
+  const [purchaseMarketplaceName, setPurchaseMarketplaceName] = useState("");
 
   return (
     <div className='space-y-4'>
@@ -36,13 +39,13 @@ function MarketplaceActions({
           Initialize
         </button>
       </div>
-      {/* <div className='p-4 bg-white shadow rounded'>
+      <div className='p-4 bg-white shadow rounded'>
         <h2 className='text-lg font-bold mb-2'>List NFT</h2>
         <input
           type='text'
           placeholder='Marketplace Name'
-          value={marketplaceName}
-          onChange={(e) => setMarketplaceName(e.target.value)}
+          value={listMarketplaceName}
+          onChange={(e) => setListMarketplaceName(e.target.value)}
           className='input'
         />
         <input
@@ -60,7 +63,7 @@ function MarketplaceActions({
           className='input'
         />
         <button
-          onClick={() => listNFT(marketplaceName, price, mintAddress)}
+          onClick={() => listNFT(listMarketplaceName, price, mintAddress)}
           className='btn-primary'
         >
           List
@@ -71,8 +74,8 @@ function MarketplaceActions({
         <input
           type='text'
           placeholder='Marketplace Name'
-          value={marketplaceName}
-          onChange={(e) => setMarketplaceName(e.target.value)}
+          value={delistMarketplaceName}
+          onChange={(e) => setDelistMarketplaceName(e.target.value)}
           className='input'
         />
         <input
@@ -83,7 +86,7 @@ function MarketplaceActions({
           className='input'
         />
         <button
-          onClick={() => delistNFT(marketplaceName, mintAddress)}
+          onClick={() => delistNFT(delistMarketplaceName, mintAddress)}
           className='btn-primary'
         >
           Delist
@@ -94,8 +97,8 @@ function MarketplaceActions({
         <input
           type='text'
           placeholder='Marketplace Name'
-          value={marketplaceName}
-          onChange={(e) => setMarketplaceName(e.target.value)}
+          value={purchaseMarketplaceName}
+          onChange={(e) => setPurchaseMarketplaceName(e.target.value)}
           className='input'
         />
         <input
@@ -106,12 +109,12 @@ function MarketplaceActions({
           className='input'
         />
         <button
-          onClick={() => purchaseNFT(marketplaceName, mintAddress)}
+          onClick={() => purchaseNFT(purchaseMarketplaceName, mintAddress)}
           className='btn-primary'
         >
           Purchase
         </button>
-      </div> */}
+      </div>
     </div>
   );
 }
